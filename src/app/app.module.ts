@@ -27,7 +27,7 @@ import { DeviceComponent } from './device/device.component';
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      {path: 'device-list', component: DeviceTableComponent},
+      {path: '', component: DeviceTableComponent},
       {path: 'device', component: DeviceComponent},
     ]),
     BrowserAnimationsModule,

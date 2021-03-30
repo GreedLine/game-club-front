@@ -13,27 +13,33 @@
     <li class="device__list-item">Group: <span class="device__information">Arch-Linux</span></li>
   </ul>
   <h1>Action list</h1>
-  <ul class="device__list">
-    <li class="device__list-item">
-      <button mat-raised-button color="primary">Change City</button>
-    </li>
-    <li class="device__list-item">
-      <button mat-raised-button color="primary">Change addresses</button>
-    </li>
-    <li class="device__list-item">
-      <button mat-raised-button color="primary">Change number in club</button>
-    </li>
-    <li class="device__list-item">
-      <button mat-raised-button color="primary">Change ISCSI</button>
-    </li>
-    <li class="device__list-item">
-      <button mat-raised-button color="primary">Chande group</button>
-    </li>
-    <li class="device__list-item">
-      <button mat-raised-button color="warn">Delete configuration</button>
-    </li>
-    <li class="device__list-item">
-      <button mat-raised-button color="warn">Reboot</button>
-    </li>
-  </ul>
+  <div class="device__container">
+    <ul class="device__list">
+      <li class="device__list-item">
+        <button mat-raised-button color="primary" class="device__button" (click)="log()">Change City</button>
+      </li>
+      <li class="device__list-item">
+        <button mat-raised-button color="primary" class="device__button">Change addresses</button>
+      </li>
+      <li class="device__list-item">
+        <button mat-raised-button color="primary" class="device__button">Change number in club</button>
+      </li>
+      <li class="device__list-item">
+        <button mat-raised-button color="primary" class="device__button">Change ISCSI</button>
+      </li>
+      <li class="device__list-item">
+        <button mat-raised-button color="primary" class="device__button">Chande group</button>
+      </li>
+    </ul>
+
+    <ul class="device__list">
+      <li class="device__list-item">
+        <button mat-raised-button color="warn" class="device__button">Delete configuration</button>
+      </li>
+      <li class="device__list-item">
+        <button mat-raised-button color="warn" class="device__button">Reboot</button>
+      </li>
+    </ul>
+  </div>
+
 </div>

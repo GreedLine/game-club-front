@@ -11,6 +11,11 @@ export class DeviceComponent implements OnInit {
 
   constructor() { }
 
+  // TODO: Написать обработчик и вынести запрос в отдельный файл.
+  log(): void{
+    console.log('Success!');
+  }
+
   ngOnInit(): void {
   }
 
