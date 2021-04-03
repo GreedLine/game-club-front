@@ -1,0 +1,24 @@
+<mat-card class="signIn">
+  <form action="" (ngSubmit)="onSubmit()" [formGroup]="loginForm" class="signIn__form">
+    <h1>Sign In</h1>
+    <mat-form-field appearance="legacy">
+      <mat-label>Login / Email</mat-label>
+      <input matInput name="login" minlength="3" formControlName="login">
+    </mat-form-field>
+    <span *ngIf="submitted && loginForm.controls['login'].errors" class="signIn__warning">Поле обязательно к заполнению</span>
+    <mat-form-field appearance="legacy">
+      <mat-label>Enter your password</mat-label>
+      <input matInput name="password" [type]="hide ? 'password' : 'text'" minlength="3" formControlName="password">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+    <span *ngIf="submitted && loginForm.controls['password'].errors" class="signIn__warning">Поле обязательно к заполнению</span>
+    <section>
+      <mat-checkbox color="primary">Remember me</mat-checkbox>
+    </section>
+    <input type="submit" value="Login" class="signIn__submit">
+  </form>
+</mat-card>
+
